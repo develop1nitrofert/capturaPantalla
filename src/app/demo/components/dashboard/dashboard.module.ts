@@ -9,6 +9,8 @@ import { ButtonModule } from 'primeng/button';
 import { StyleClassModule } from 'primeng/styleclass';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { DashboardsRoutingModule } from './dashboard-routing.module';
+import { AudioRecordingService } from '../../service/audio-recording.service';
+import { WebcamModule } from 'ngx-webcam';
 
 @NgModule({
     imports: [
@@ -20,8 +22,10 @@ import { DashboardsRoutingModule } from './dashboard-routing.module';
         StyleClassModule,
         PanelMenuModule,
         ButtonModule,
-        DashboardsRoutingModule
+        DashboardsRoutingModule,
+        WebcamModule
     ],
-    declarations: [DashboardComponent]
+    declarations: [DashboardComponent],
+    providers:[AudioRecordingService]
 })
 export class DashboardModule { }

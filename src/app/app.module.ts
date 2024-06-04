@@ -11,6 +11,10 @@ import { EventService } from './demo/service/event.service';
 import { IconService } from './demo/service/icon.service';
 import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
+import { PrimengModule } from './layout/shared/primeng/primeng.module';
+import { WebcamModule } from 'ngx-webcam';
+//import { WebcamModule } from '@cbdev/ngx-webcam';
+
 
 @NgModule({
     declarations: [
@@ -18,7 +22,9 @@ import { PhotoService } from './demo/service/photo.service';
     ],
     imports: [
         AppRoutingModule,
-        AppLayoutModule
+        AppLayoutModule,
+        PrimengModule,
+        WebcamModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
